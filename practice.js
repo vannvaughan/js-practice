@@ -62,3 +62,11 @@
 // 5. countVowels 
    // Write a function called countVowels that takes in a string and returns the number of vowels in the string. 
 
+// 6. alertMessage
+   // Write a function called alertMessage, which alerts any message to the user.
+
+// 7. promptMessage
+   // Write a function called promptMessage, which asks a user for a username using the window.prompt method. Return the username to the user. 
+
+// 8. callbackPractice
+   // Write a function called callbackPractice that takes in two parameters, a string value and a callback function (you can call it cb). In your function, call the callback function (cb) and pass it the string value. 

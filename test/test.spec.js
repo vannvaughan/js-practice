@@ -78,6 +78,48 @@ describe("countVowels", function() {
    })
 })
 
+describe('alertMessage', function () {
+   beforeEach(function () {
+      spyOn(window, 'alert')
+   })
+   it('should exist', function () {
+      expect(alertMessage).toBeDefined();
+   })
+   it('should alert a message', function () {
+      alertMessage();
+      expect(alert).toHaveBeenCalled();
+   })
+})
+
+describe('promptUsername', function () {
+   beforeEach(function () {
+      spyOn(window, 'prompt').and.returnValue('Rockstar')
+   })
+   it('should exist', function () {
+      expect(promptUsername).toBeDefined();
+   })
+   it('should prompt the user for a username', function () {
+      promptUsername()
+      expect(prompt).toHaveBeenCalled();
+   })
+   it('should return username', function () {
+      expect(promptUsername()).toEqual('Rockstar')
+   })
+})
+
+describe('callbackPractice', function () {
+   it('should exist and be a function', function () {
+      expect(callbackPractice).toBeDefined();
+      expect(callbackPractice).toEqual(jasmine.any(Function));
+   })
+   it('should call a callback function', function () {
+      var callback = jasmine.createSpy(function (str) {
+         return str
+      })
+      var test = callbackPractice(1, callback);
+      expect(callback).toHaveBeenCalledWith(1);
+   })
+})
 
 
 
