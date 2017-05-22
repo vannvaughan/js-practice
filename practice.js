@@ -18,8 +18,8 @@
    // Define a function called speakTheTruth, which returns "Brian is amazing" when called.
 
 // Solution
-   function speakTheTruth() {
-      return "Brian is amazing";
+  function speakTheTruth() {
+      return "Brian is amazing"
    }
 
 
@@ -31,7 +31,7 @@
 
 // Incorrect Answer
    function speakFalsehood() {
-      return "Brian is amazing"
+      return "Shea is the best"
    }
 // Check the test
    // Click on the failing test (labeled "returns the truth") to see what you produced and what it expected
@@ -42,16 +42,34 @@
 
    // N.B. Return the boolean value true or false, not the string values of the words. 
 
-   function isEven( ) {
-
+   function isEven(num) {
+    if (num % 2 === 0) {
+      return True;
+    } else {
+      return False;
+    }
    }
 
 // 2. returnSmallest
   // Write a function called returnSmallest that takes in an array of numbers as a parameter and returns the smallest value in the array.
-
-
+function returnSmallest(nums) {
+  var smallestNum = nums[0]
+  for (var i = 1; i < nums.length; i++) {
+    if (nums[i] < smallestNum) {
+      smallestNum = nums[i];
+    }
+    return smallestNum;
+}
+ //If a num is smaller than the smallest, make that the new smallest num.
 // 3. addUser
   // Write a function called createUser, which takes in two parameters, an array of usernames and a new username. Create a new array which contains all of the usernames, including the new username. Return the new array.
+function createUser(usernames, newUser) {
+  var copyUsers = usernames.slice();
+  copyUsers.push(newUsers);
+  return copyUsers;
+}
+  }
+}
 
 // 4. reverseName
    // Were you ever obsessed with saying your name backwards as a kid? I was for some reason. Write a function called reverseName which takes in a name and returns the reverse of the name. HINT: You can build a string through concatenation: 
@@ -64,9 +82,19 @@
 
 // 6. alertMessage
    // Write a function called alertMessage, which alerts any message to the user.
+   function alertMessage(){
+     alert('Hello')
+   }
 
 // 7. promptMessage
    // Write a function called promptMessage, which asks a user for a username using the window.prompt method. Return the username to the user. 
+   function promptMessage() {
+     var name = prompt('Whats your name?')
+     return name;
+   }
 
 // 8. callbackPractice
    // Write a function called callbackPractice that takes in two parameters, a string value and a callback function (you can call it cb). In your function, call the callback function (cb) and pass it the string value. 
+function callbackPractice(value, cb) {
+  callback(value)
+}
